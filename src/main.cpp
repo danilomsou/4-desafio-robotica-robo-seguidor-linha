@@ -18,13 +18,14 @@ int velocidade = 70;
 #define sensorE A5
 #define sensorCentroD A3
 #define sensorCentroE A4
+
 //Variaveis dos Sensores
 int direito = 0;
 int esquerdo = 0;
 int centroE = 0;
 int centroD = 0;
 
-char direcao;
+//Valor de corte dos sensores
 int corte = 800;
 
 void curvaE(){
@@ -90,11 +91,6 @@ void setup() {
    pinMode(sensorCentroD, INPUT);
    pinMode(sensorCentroE, INPUT);
 
-   //Configurando Ultrassônico
-    pinMode(trig, OUTPUT);
-    pinMode(echo, INPUT);
-    digitalWrite(trig, LOW); 
-  
    //Iniciando Serial
    Serial.begin(9600);
 }
